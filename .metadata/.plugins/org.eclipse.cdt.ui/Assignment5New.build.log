@@ -1,0 +1,12 @@
+10:15:27 **** Incremental Build of configuration Debug for project Assignment5New ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BST.o" "..\\src\\BST.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Assignment5New.o" "..\\src\\Assignment5New.cpp" 
+..\src\Assignment5New.cpp: In function 'int main()':
+..\src\Assignment5New.cpp:17:14: warning: variable 'cpy' set but not used [-Wunused-but-set-variable]
+  Node* temp,*cpy;
+              ^
+g++ -o Assignment5New.exe "src\\BST.o" "src\\Assignment5New.o" 
+
+10:15:28 Build Finished (took 1s.203ms)
+

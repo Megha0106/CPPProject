@@ -1,0 +1,184 @@
+/*Title: Student database
+ * student.cpp
+ *
+ *  Created on: Aug 12, 2020
+ *      Author: hp
+ */
+#include<iostream>
+using namespace std;
+//class declaration
+class Student_class
+{
+public:
+	//data members
+	struct student
+	{
+		int roll_no,total;
+		string name;
+		long mbl_no;
+		int marks[5];
+		double percentage;
+	}s[50];
+	//method declaration
+	void input(int);
+	void display(int);
+	int topper(int);
+	int insert(int);
+	int delete_Stud(int);
+	int search(int,int);
+};
+//definition of input()
+void Student_class::input(int i)
+{
+		cout<<"Enter details of student"<<i+1<<":"<<endl;
+		cout<<"Roll_no.:";
+		cin>>s[i].roll_no;
+		cout<<"Name:";
+		cin>>s[i].name;
+		s[i].total=0;
+		cout<<"Mobile no:";
+		cin>>s[i].mbl_no;
+		cout<<"Enter marks of 5 subjects:"<<endl;
+		for(int j=0;j<5;j++)
+		{
+			cout<<"Subject "<<j+1<<":";
+			cin>>s[i].marks[j];
+			s[i].total+=s[i].marks[j];
+		}
+		s[i].percentage=s[i].total/5;
+
+}
+//definition of display
+void Student_class::display(int i)
+{
+		cout<<endl<<"Details of student "<<i+1<<"->"<<endl;
+		cout<<"Roll No.->"<<s[i].roll_no<<endl;
+		cout<<"Name->"<<s[i].name<<endl;
+		cout<<"Mobile No.->"<<s[i].mbl_no;
+		cout<<"Marks->"<<endl;
+		for(int j=0;j<5;j++)
+			cout<<"Subject "<<j+1<<"->"<<s[i].marks[j]<<endl;
+		cout<<"Total->"<<s[i].total<<endl;
+		cout<<"Percentage->"<<s[i].percentage<<endl<<endl;
+}
+//definition of topper method
+int Student_class::topper(int n)
+{
+	int topper_index=0;
+	for(int i=1;i<n;i++)
+	{
+		if(s[topper_index].percentage<s[i].percentage)
+			topper_index=i;
+	}
+	return topper_index;
+
+}
+//definition of insert method
+int Student_class::insert(int n)
+{
+	int index;
+	cout<<"Enter the index where you want to add student:";
+	cin>>index;
+	if(index>=50)
+	{
+		cout<<"Index is out of bounds";
+		return n;
+	}
+	else
+	{
+		input(49);
+		index--;
+		for(int i=n;i>index;i--)
+		{
+			s[n]=s[n-1];
+		}
+		s[index]=s[49];
+		cout<<"Student inserted successfully"<<endl;
+	}
+	return n+1;
+}
+//definition of delete method
+int Student_class::delete_Stud(int n)
+{
+	int rno;
+	cout<<"Enter roll number of student to be deleted:";
+	cin>>rno;
+	int index=search(rno,n);
+	if(index==-1)
+		cout<<"Student with roll number "<<rno<<" not found"<<endl;
+	else
+	{
+		for(int i=index;i<(n-1);i++)
+			s[i]=s[i+1];
+		cout<<"Student deleted successfully"<<endl;
+		n--;
+	}
+	return n;
+}
+//definition of search
+int Student_class::search(int rno,int n)
+{
+	for(int i=0;i<n;i++)
+		if(s[i].roll_no==rno)
+			return i;
+	return -1;
+}
+//main function
+int main()
+{
+	Student_class obj;
+	int n,choice,index,rno;
+	cout<<"Enter number of students:";
+	cin>>n;
+	for(int i=0;i<n;i++)
+		obj.input(i);
+	do
+	{
+		//display menus to user
+		cout<<"------------------------"<<"MENU"<<"-------------------"<<endl;
+		cout<<"1:Display\n2:Display topper\n3:Search a student\n4:Insert new record\n5:Delete record\n6:Update student's marks\n7:Sort student's list\n8:Exit"<<endl;
+		cout<<"Enter choice:";//enter choice of user
+		cin>>choice;
+		cout<<endl<<"------------------------------------------------------"<<endl;
+		switch(choice)  //switch choice of user
+		{
+		case 1:
+			for(int i=0;i<n;i++)
+			obj.display(i);
+			break;
+
+		case 2:
+			index=obj.topper(n);
+			cout<<endl<<"Details of topper student:";
+			obj.display(index);
+			break;
+		case 3:
+			cout<<"Enter roll number of student to be search:";
+			cin>>rno;
+			index=obj.search(rno,n);
+			if(index==-1)
+				cout<<"Student not found"<<endl;
+			else
+			{
+				cout<<"Student found"<<endl;
+				obj.display(index);
+			}
+			break;
+		case 4:
+			n=obj.insert(n);
+			break;
+		case 5:
+			n=obj.delete_Stud(n);
+			break;
+		case 6:
+			cout<<endl<<"Thank you";
+			break;
+		default:
+			cout<<"Enter valid choice";
+		}
+	}while(choice!=6);
+	return 0;
+}
+
+
+

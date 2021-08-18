@@ -1,0 +1,130 @@
+/*
+ * TBT.cpp
+ *
+ *  Created on: Nov 25, 2020
+ *      Author: hp
+ */
+#include<iostream>
+
+#include "TBT.h"
+using namespace std;
+
+TBT::TBT() {
+	// TODO Auto-generated constructor stub
+	root=NULL;
+
+}
+//=================definition of getNode()================================
+Node* TBT::getNode(int key){
+	Node* T=new Node;
+	T->data=key;
+	T->lThread=true;
+	T->rThread=true;
+	return T;
+}
+//===============definition of insert()===================================
+bool TBT::insert(int key){
+	//if tree is not empty
+	Node* parent=root;
+	Node*ptr=root;
+	while(ptr!=NULL){
+		if(key==ptr->data)
+		{
+			return false;
+		}
+		parent=ptr;
+		if(key < ptr->data)
+		{
+			if(ptr->lThread==false)
+				ptr=ptr->left;
+			else
+				break;
+		}
+		else{
+			if(ptr->rThread==false)
+				ptr=ptr->right;
+			else
+				break;
+		}
+
+	}
+	Node* newN=getNode(key);
+	if(parent==NULL){
+		root=newN;
+		newN->left=NULL;
+		newN->right=NULL;
+	}
+	else if(key<parent->data){
+		newN->left=parent->left;
+		newN->right=parent;
+		parent->lThread=false;
+		parent->left=newN;
+	}
+	else{
+		newN->left=parent;
+		newN->right=parent->right;
+		parent->rThread=false;
+		parent->right=newN;
+	}
+	return true;
+}
+//==============definition of leftmost()========================
+Node* TBT::inOrderSuccessor(Node* n){
+	//if node has rThread then its right element is its inorder successor
+	 if(n->rThread)
+		 return n->right;
+	 //else find the leftmost element from node's right subtree
+	 n=n->right;
+	 while(n->lThread==false)
+		 n=n->left;
+	 return n;
+}
+//=============inorder traversal================================
+void TBT::inorder(){
+	if(root==NULL)
+	{
+		cout<<"\tTree is empty"<<endl;
+		return;
+	}
+	else{
+		Node* curr=root;
+		//find the first element i.e leftmost element
+		while(curr->lThread==false)
+			curr=curr->left;
+		while(curr!=NULL)
+		{
+			cout<<"\t"<<curr->data;
+			//find its inorder successor
+			curr=inOrderSuccessor(curr);
+		}
+	}
+
+}
+//==========prorder traversal=========================================
+void TBT::preorder(){
+
+	if(root==NULL)
+	{
+		cout<<"\tEmpty tree"<<endl;
+		return;
+	}
+	else{
+		Node* curr=root;
+		while(curr!=NULL)
+		{
+			/*
+			cout<<"\t"<<curr->data;
+			if(curr->lThread==false)
+				curr=curr->left;
+			else{
+				while(curr->rThread==true)
+					curr=curr->right;
+				curr=curr->right;
+			}*/
+		}
+	}
+}
+TBT::~TBT() {
+	// TODO Auto-generated destructor stub
+}
+

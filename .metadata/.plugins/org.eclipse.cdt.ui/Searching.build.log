@@ -1,0 +1,8 @@
+17:13:51 **** Incremental Build of configuration Debug for project Searching ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o BinarySearch.o "..\\BinarySearch.cpp" 
+..\BinarySearch.cpp:39:18: fatal error: stud.h: No such file or directory
+compilation terminated.
+
+17:13:52 Build Finished (took 589ms)
+

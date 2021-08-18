@@ -1,0 +1,17 @@
+15:00:24 **** Rebuild of configuration Debug for project Stack_ADT ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Stack_ADT.o" "..\\src\\Stack_ADT.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\StackAdt.o" "..\\src\\StackAdt.cpp" 
+g++ -o Stack_ADT.exe "src\\Stack_ADT.o" "src\\StackAdt.o" 
+src\Stack_ADT.o: In function `main':
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:15: undefined reference to `StackAdt<int>::StackAdt()'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:16: undefined reference to `StackAdt<int>::push(int)'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:17: undefined reference to `StackAdt<int>::push(int)'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:18: undefined reference to `StackAdt<int>::push(int)'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:19: undefined reference to `StackAdt<int>::display()'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:15: undefined reference to `StackAdt<int>::~StackAdt()'
+E:\DSA\Stack_ADT\Debug/../src/Stack_ADT.cpp:15: undefined reference to `StackAdt<int>::~StackAdt()'
+collect2.exe: error: ld returned 1 exit status
+
+15:00:26 Build Finished (took 1s.558ms)
+

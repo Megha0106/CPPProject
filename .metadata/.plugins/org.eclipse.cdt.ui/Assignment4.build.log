@@ -1,0 +1,19 @@
+18:08:17 **** Incremental Build of configuration Release for project Assignment4 ****
+Info: Internal Builder is used for build
+g++ -o Assignment4.exe "src\\TreeStack.o" "src\\Assignment4.o" 
+src\Assignment4.o:Assignment4.cpp:(.text+0x10): multiple definition of `TreeStack::TreeStack()'
+src\TreeStack.o:TreeStack.cpp:(.text+0x10): first defined here
+src\Assignment4.o:Assignment4.cpp:(.text+0x10): multiple definition of `TreeStack::TreeStack()'
+src\TreeStack.o:TreeStack.cpp:(.text+0x10): first defined here
+src\Assignment4.o:Assignment4.cpp:(.text+0x20): multiple definition of `TreeStack::push(TreeNode*)'
+src\TreeStack.o:TreeStack.cpp:(.text+0x20): first defined here
+src\Assignment4.o:Assignment4.cpp:(.text+0x30): multiple definition of `TreeStack::pop()'
+src\TreeStack.o:TreeStack.cpp:(.text+0x30): first defined here
+src\Assignment4.o:Assignment4.cpp:(.text+0x60): multiple definition of `TreeStack::~TreeStack()'
+src\TreeStack.o:TreeStack.cpp:(.text+0x60): first defined here
+src\Assignment4.o:Assignment4.cpp:(.text+0x60): multiple definition of `TreeStack::~TreeStack()'
+src\TreeStack.o:TreeStack.cpp:(.text+0x60): first defined here
+collect2.exe: error: ld returned 1 exit status
+
+18:08:18 Build Finished (took 563ms)
+

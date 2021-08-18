@@ -1,0 +1,7 @@
+22:55:20 **** Incremental Build of configuration Debug for project Assignment2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o infix_to_postfix.o "..\\infix_to_postfix.cpp" 
+g++ -o Assignment2.exe infix_to_postfix.o 
+
+22:55:21 Build Finished (took 1s.166ms)
+

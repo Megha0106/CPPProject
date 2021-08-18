@@ -1,0 +1,324 @@
+11:07:27 **** Incremental Build of configuration Debug for project Mock ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hotel.o" "..\\src\\hotel.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mock.o" "..\\src\\Mock.cpp" 
+..\src\Mock.cpp: In member function 'void hotel::available_r()':
+..\src\Mock.cpp:26:8: error: 'cout' was not declared in this scope
+        cout<<"\n Available rooms for singles:"<<single_r;
+        ^
+..\src\Mock.cpp:26:8: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp: In member function 'int hotel::Ac_NAc()':
+..\src\Mock.cpp:33:4: error: 'cout' was not declared in this scope
+    cout<<"\n1.AC\n2.Non-AC";
+    ^
+..\src\Mock.cpp:33:4: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:35:4: error: 'cin' was not declared in this scope
+    cin>>c;
+    ^
+..\src\Mock.cpp:35:4: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp: In member function 'void hotel::main_menu()':
+..\src\Mock.cpp:56:1: error: 'cout' was not declared in this scope
+ cout<<"\n\t\t\t\t*************";
+ ^
+..\src\Mock.cpp:56:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:65:1: error: 'cin' was not declared in this scope
+ cin>>choice;
+ ^
+..\src\Mock.cpp:65:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp:52:12: warning: unused variable 'ch' [-Wunused-variable]
+ int choice,ch,c;
+            ^
+..\src\Mock.cpp:52:15: warning: unused variable 'c' [-Wunused-variable]
+ int choice,ch,c;
+               ^
+..\src\Mock.cpp: In member function 'void hotel::add()':
+..\src\Mock.cpp:90:1: error: 'ofstream' was not declared in this scope
+ ofstream fout("Record.dat",ios::app);
+ ^
+..\src\Mock.cpp:90:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:165:34: note:   'std::ofstream'
+   typedef basic_ofstream<char>   ofstream;
+                                  ^
+..\src\Mock.cpp:91:1: error: 'cout' was not declared in this scope
+ cout<<"\n Enter Customer Detalis";
+ ^
+..\src\Mock.cpp:91:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:94:1: error: 'cin' was not declared in this scope
+ cin>>r;
+ ^
+..\src\Mock.cpp:94:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp:135:4: error: 'fout' was not declared in this scope
+    fout.write((char*)this,sizeof(hotel));
+    ^
+..\src\Mock.cpp:89:17: warning: unused variable 'ac' [-Wunused-variable]
+ int r,flag,c,ch,ac,nac;
+                 ^
+..\src\Mock.cpp:89:20: warning: unused variable 'nac' [-Wunused-variable]
+ int r,flag,c,ch,ac,nac;
+                    ^
+..\src\Mock.cpp: In member function 'void hotel::display()':
+..\src\Mock.cpp:144:1: error: 'ifstream' was not declared in this scope
+ ifstream fin("Record.dat",ios::in);
+ ^
+..\src\Mock.cpp:144:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:162:34: note:   'std::ifstream'
+   typedef basic_ifstream<char>   ifstream;
+                                  ^
+..\src\Mock.cpp:146:1: error: 'cout' was not declared in this scope
+ cout<<"\n Enter room no: ";
+ ^
+..\src\Mock.cpp:146:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:147:1: error: 'cin' was not declared in this scope
+ cin>>r;
+ ^
+..\src\Mock.cpp:147:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp:148:8: error: 'fin' was not declared in this scope
+ while(!fin.eof())
+        ^
+..\src\Mock.cpp:169:1: error: 'fin' was not declared in this scope
+ fin.close();
+ ^
+..\src\Mock.cpp:145:12: warning: unused variable 'ch' [-Wunused-variable]
+ int r,flag,ch,c;
+            ^
+..\src\Mock.cpp:145:15: warning: unused variable 'c' [-Wunused-variable]
+ int r,flag,ch,c;
+               ^
+..\src\Mock.cpp: In member function 'void hotel::rooms()':
+..\src\Mock.cpp:175:1: error: 'ifstream' was not declared in this scope
+ ifstream fin("Record.dat",ios::in);
+ ^
+..\src\Mock.cpp:175:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:162:34: note:   'std::ifstream'
+   typedef basic_ifstream<char>   ifstream;
+                                  ^
+..\src\Mock.cpp:176:1: error: 'cout' was not declared in this scope
+ cout<<"\n\t\t\tList Of Rooms Allotted";
+ ^
+..\src\Mock.cpp:176:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:179:8: error: 'fin' was not declared in this scope
+ while(!fin.eof())
+        ^
+..\src\Mock.cpp:187:1: error: 'fin' was not declared in this scope
+ fin.close();
+ ^
+..\src\Mock.cpp: In member function 'void hotel::edit()':
+..\src\Mock.cpp:194:1: error: 'cout' was not declared in this scope
+ cout<<"\n EDIT MENU";
+ ^
+..\src\Mock.cpp:194:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:199:1: error: 'cin' was not declared in this scope
+ cin>>choice;
+ ^
+..\src\Mock.cpp:199:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp: In member function 'int hotel::check(int)':
+..\src\Mock.cpp:218:1: error: 'ifstream' was not declared in this scope
+ ifstream fin("Record.dat",ios::in);
+ ^
+..\src\Mock.cpp:218:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:162:34: note:   'std::ifstream'
+   typedef basic_ifstream<char>   ifstream;
+                                  ^
+..\src\Mock.cpp:219:8: error: 'fin' was not declared in this scope
+ while(!fin.eof())
+        ^
+..\src\Mock.cpp:228:1: error: 'fin' was not declared in this scope
+ fin.close();
+ ^
+..\src\Mock.cpp: In member function 'void hotel::modify(int)':
+..\src\Mock.cpp:235:1: error: 'fstream' was not declared in this scope
+ fstream file("Record.dat",ios::in|ios::out|ios::binary);
+ ^
+..\src\Mock.cpp:235:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:168:33: note:   'std::fstream'
+   typedef basic_fstream<char>   fstream;
+                                 ^
+..\src\Mock.cpp:236:8: error: 'file' was not declared in this scope
+ while(!file.eof())
+        ^
+..\src\Mock.cpp:242:1: error: 'cout' was not declared in this scope
+ cout<<"\n Enter New Details";
+ ^
+..\src\Mock.cpp:242:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:258:1: error: 'cout' was not declared in this scope
+ cout<<"\n Sorry Room no. not found or vacant!!";
+ ^
+..\src\Mock.cpp:258:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:259:1: error: 'file' was not declared in this scope
+ file.close();
+ ^
+..\src\Mock.cpp: In member function 'void hotel::delete_rec(int)':
+..\src\Mock.cpp:266:1: error: 'ifstream' was not declared in this scope
+ ifstream fin("Record.dat",ios::in);
+ ^
+..\src\Mock.cpp:266:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:162:34: note:   'std::ifstream'
+   typedef basic_ifstream<char>   ifstream;
+                                  ^
+..\src\Mock.cpp:267:1: error: 'ofstream' was not declared in this scope
+ ofstream fout("temp.dat",ios::out);
+ ^
+..\src\Mock.cpp:267:1: note: suggested alternative:
+In file included from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/ios:38:0,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/istream:38,
+                 from C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/fstream:38,
+                 from ..\src\Mock.cpp:11:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iosfwd:165:34: note:   'std::ofstream'
+   typedef basic_ofstream<char>   ofstream;
+                                  ^
+..\src\Mock.cpp:268:8: error: 'fin' was not declared in this scope
+ while(!fin.eof())
+        ^
+..\src\Mock.cpp:273:1: error: 'cout' was not declared in this scope
+ cout<<"\n Name: "<<name;
+ ^
+..\src\Mock.cpp:273:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:277:1: error: 'cin' was not declared in this scope
+ cin>>ch;
+ ^
+..\src\Mock.cpp:277:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^
+..\src\Mock.cpp:279:1: error: 'fout' was not declared in this scope
+ fout.write((char*)this,sizeof(hotel));
+ ^
+..\src\Mock.cpp:283:1: error: 'fout' was not declared in this scope
+ fout.write((char*)this,sizeof(hotel));
+ ^
+..\src\Mock.cpp:285:1: error: 'fin' was not declared in this scope
+ fin.close();
+ ^
+..\src\Mock.cpp:286:1: error: 'fout' was not declared in this scope
+ fout.close();
+ ^
+..\src\Mock.cpp:288:1: error: 'cout' was not declared in this scope
+ cout<<"\n Sorry room no. not found or vacant!!";
+ ^
+..\src\Mock.cpp:288:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp: At global scope:
+..\src\Mock.cpp:296:11: error: '::main' must return 'int'
+ void main()
+           ^
+..\src\Mock.cpp: In function 'int main()':
+..\src\Mock.cpp:299:10: error: 'C80' was not declared in this scope
+ textmode(C80);
+          ^
+..\src\Mock.cpp:299:13: error: 'textmode' was not declared in this scope
+ textmode(C80);
+             ^
+..\src\Mock.cpp:300:16: error: 'WHITE' was not declared in this scope
+ textbackground(WHITE);
+                ^
+..\src\Mock.cpp:300:21: error: 'textbackground' was not declared in this scope
+ textbackground(WHITE);
+                     ^
+..\src\Mock.cpp:301:11: error: 'BLUE' was not declared in this scope
+ textcolor(BLUE);
+           ^
+..\src\Mock.cpp:301:15: error: 'textcolor' was not declared in this scope
+ textcolor(BLUE);
+               ^
+..\src\Mock.cpp:302:1: error: 'cout' was not declared in this scope
+ cout<<"\n\t\t\t****************************";
+ ^
+..\src\Mock.cpp:302:1: note: suggested alternative:
+In file included from ..\src\Mock.cpp:12:0:
+C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^
+..\src\Mock.cpp:305:8: error: 'sleep' was not declared in this scope
+ sleep(2);
+        ^
+
+11:07:29 Build Finished (took 2s.363ms)
+

@@ -1,0 +1,7 @@
+15:29:57 **** Rebuild of configuration Debug for project DSA_Calculator ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Calculator.o "..\\Calculator.cpp" 
+g++ -o DSA_Calculator.exe Calculator.o 
+
+15:30:03 Build Finished (took 6s.350ms)
+

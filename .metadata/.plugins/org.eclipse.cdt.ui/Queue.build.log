@@ -1,0 +1,9 @@
+22:50:20 **** Incremental Build of configuration Debug for project Queue ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o LinearQueue.o "..\\LinearQueue.cpp" 
+g++ -o Queue.exe linerQueue.o LinearQueue.o 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Queue.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+22:50:21 Build Finished (took 715ms)
+
